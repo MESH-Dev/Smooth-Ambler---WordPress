@@ -1,0 +1,195 @@
+ 
+/* Table of Content
+==================================================
+ 
+
+/* Header Styles
+================================================== */
+#header-bar{background-color: $red;	height: 12px; width: 100%;	}
+
+header{
+	background: $tan url("assets/img/SA_headerpattern.jpg");
+	height: 260px;
+}
+
+#mainNav li{display: inline; float: left;}
+
+ 
+.logo{
+	padding-top: 20px;
+	text-align: center;
+ }
+
+ 
+/* Hompage Styles
+================================================== */
+  
+
+ 
+
+/* PAGE Styles
+================================================== */
+.page_content{
+	margin-top: 20px;
+	 
+	h2{
+		text-transform: uppercase; 
+		color: $red;
+		font-weight: normal; 
+		border-bottom: 1px solid $red;
+		padding-bottom: 4px;
+		&:after{
+			content:""; 
+			width:100%; 
+			margin-top: 0px; 
+			display:block;
+			border-bottom: 1px solid $red ;
+			 
+		}
+	}
+}
+.page_nav { 
+	padding: 15px 15px 40px 15px;
+	li{padding-bottom: 6px;}
+	li a{color: $red; text-transform: uppercase; font-weight: bold;}
+	li a:hover{color: $grey;}
+	@include breakpoint(landscape) {
+		padding: 15px 15px 15px 15px;       
+	}
+	@include breakpoint(portrait) {
+		padding: 15px 15px 15px 15px;       
+	}
+}
+
+ 
+ 
+
+
+
+/* FOOTER Styles
+================================================== */
+#footer{
+	width: 100%; 
+	background-color: $grey;
+	margin-top: 80px;
+}
+.footer{
+	padding-top:20px;
+	
+	.menu {
+
+		ul{
+			-moz-column-count: 3;
+		    -moz-column-gap: 20px;
+		    -webkit-column-count: 3;
+		    -webkit-column-gap: 20px;
+		    column-count: 3;
+		    column-gap: 20px;
+		    width: 450px;
+
+		    @include breakpoint(portrait) {
+		 		display:none;
+			}
+			@include breakpoint(landscape) {
+		 		display:none;
+			}
+		}
+		li{
+			list-style-type: none; 
+			font-weight:bold;
+			 margin-bottom:18px;  
+
+			ul li {font-weight: normal;margin-bottom:4px; }
+	    }
+		li a{
+			color: #fff;
+			&:hover{color: $red}
+		}
+	}
+
+	h3{text-transform: uppercase; font-weight:bold; font-size:18px; margin-bottom:18px; }
+	span.contact{color: $red}
+	p a{color:$red;}
+	p a:hover{color:$red;}
+	a img:hover{@include opacity(0.7); }
+
+	.footer_icon{
+		padding-top:140px;
+		@include breakpoint(smallscreen) {
+ 		padding-top: 180px;
+		img {max-width:50px; }
+		}
+
+		@include breakpoint(landscape) { 
+     		padding-top: 10px;
+     		img {display:none; }
+	    }
+
+		@include breakpoint(portrait) { 
+		 	padding-top: 10px;
+		 	img {display:none; }
+		}
+
+	}
+}
+
+.copyright{
+	border-top:1px solid $red; 
+	padding-top:10px;
+	
+
+}
+.mesh{
+	float:right; margin-top:-38px;
+ 
+
+		@include breakpoint(landscape) { 
+     		margin-top:0px; float:left;
+	    }
+
+		@include breakpoint(portrait) { 
+		 	margin-top:0px; float:left;
+		}
+
+}
+
+/* #Page Styles
+================================================== */
+
+
+ 
+
+.leftcol{
+ 
+ 
+	@include breakpoint(smallscreen) {background-color: #ff0000;}
+    @include breakpoint(landscape) {background-color: #1234ff;}
+	@include breakpoint(portrait) {background-color: #003366;}
+ 
+}
+
+ 
+
+
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+ 
