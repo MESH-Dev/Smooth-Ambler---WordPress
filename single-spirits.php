@@ -20,7 +20,7 @@
   <?php endif; ?>
 
 
-  <div class="container page-content">
+  <div class="container page_content">
 
     <div class="three columns">
         <?php

@@ -1,7 +1,7 @@
- 
+
 /* Table of Content
 ==================================================
- 
+
 
 /* Header Styles
 ================================================== */
@@ -39,7 +39,7 @@ header{
 	border-bottom: 1px solid $cherry_black;
 	border-top: 1px solid $cherry_black;
 	float:left;
- 
+
    	position:relative;
 
 }
@@ -52,7 +52,7 @@ header{
    	position:relative;
    	right:50%;
    	text-align:center;
-	
+
 }
 
 #mainNav ul li {
@@ -63,13 +63,13 @@ header{
    	padding:0;
    	position:relative;
    	left:50%;
- 
+
 }
-  
+
 #mainNav ul li a {
 	font: 11px/18px "Stint Ultra Expanded", cursive;
 	text-transform: uppercase;
-	padding: 5px 15px;  
+	padding: 5px 15px;
 	letter-spacing: 0.08em;
 	color: $cherry_black;
 	text-decoration: none;
@@ -82,34 +82,34 @@ header{
 
 /* Submenu items */
 #mainNav ul ul {
-	display:none; 
+	display:none;
 	position:absolute;
 	top:2em;
 	left:0;
 	right:auto;
-	width:10em; 
+	width:10em;
 	z-index: 1000;
 }
 #mainNav ul ul li {
 	left:auto;
 	background: rgba(227, 217, 191, 0.99);
-	margin:0; 
+	margin:0;
 	clear:left;
 	width:100%;
 	padding:0px 20px 0px 0px ;
- 
+
 }
 
 #mainNav ul ul li a,
-#mainNav ul li:hover ul li a{ 
-	padding:4px 0px 5px 10px ; 
+#mainNav ul li:hover ul li a{
+	padding:4px 0px 5px 10px ;
 	font-size:11px;
-	text-align:left; 
-	line-height:30px;  
-	//border-bottom:2px  $cherry_black dashed; 
+	text-align:left;
+	line-height:30px;
+	//border-bottom:2px  $cherry_black dashed;
 	&:after{
 		content:"";
-		 
+
 	    position: absolute;
 	    border-bottom:2px  $cherry_black dashed;
 	    left: 10px;
@@ -118,25 +118,25 @@ header{
 	}
 }
 
- 
+
 
 
 #mainNav ul ul li a:hover,
-#mainNav ul li:hover ul li a:hover{ 
+#mainNav ul li:hover ul li a:hover{
 	color:$dark_red;
 }
 
 #mainNav ul ul.last {
-	left:auto;  
-	right:0;  
+	left:auto;
+	right:0;
 }
 
-#mainNav ul li:hover ul { 
-	display:block;  
+#mainNav ul li:hover ul {
+	display:block;
 }
 
 
- 
+
 /* Hompage Styles
 ================================================== */
 
@@ -183,63 +183,70 @@ header{
 
 
 	h2 {color: $cream;}
-	 
+
 }
 
 
-  
 
- 
+
+
 
 /* PAGE Styles
 ================================================== */
 .page_content{
 	margin-top: 20px;
-	 
+
 	h2{
-		text-transform: uppercase; 
-		color: $red;
-		font-weight: normal; 
-		border-bottom: 1px solid $red;
+		text-transform: uppercase;
+		font-weight: normal;
+		border-bottom: 0px;
 		padding-bottom: 4px;
-		&:after{
-			content:""; 
-			width:100%; 
-			margin-top: 0px; 
-			display:block;
-			border-bottom: 1px solid $red ;
-			 
-		}
+		margin-bottom: 0px;
+	}
+
+	.inline {
+		font-size: 14px;
+		line-height: 26px;
+		font-family: "Stint Ultra Expanded", cursive;
+		letter-spacing: 0.1em;
+		color: $red;
+		a{ text-decoration: none;}
+		a:hover{ text-decoration: none; color:$dark_red;}
 	}
 }
-.page_nav { 
+
+.read_more{
+	font-weight: bold;
+}
+
+.page_nav {
 	padding: 15px 15px 40px 15px;
 	li{padding-bottom: 6px;}
 	li a{color: $red; text-transform: uppercase; font-weight: bold;}
 	li a:hover{color: $grey;}
 	@include breakpoint(landscape) {
-		padding: 15px 15px 15px 15px;       
+		padding: 15px 15px 15px 15px;
 	}
 	@include breakpoint(portrait) {
-		padding: 15px 15px 15px 15px;       
+		padding: 15px 15px 15px 15px;
 	}
 }
 
- 
- 
+
+
 
 
 
 /* FOOTER Styles
 ================================================== */
 #footer{
-	width: 100%; 
+	width: 100%;
 	background-color: $grey;
 	margin-top: 80px;
 }
 .footer{
 	padding-top:20px;
-	
+
 	.menu {
 
 		ul{
@@ -259,9 +266,9 @@ header{
 			}
 		}
 		li{
-			list-style-type: none; 
+			list-style-type: none;
 			font-weight:bold;
-			 margin-bottom:18px;  
+			 margin-bottom:18px;
 
 			ul li {font-weight: normal;margin-bottom:4px; }
 	    }
@@ -284,12 +291,12 @@ header{
 		img {max-width:50px; }
 		}
 
-		@include breakpoint(landscape) { 
+		@include breakpoint(landscape) {
      		padding-top: 10px;
      		img {display:none; }
 	    }
 
-		@include breakpoint(portrait) { 
+		@include breakpoint(portrait) {
 		 	padding-top: 10px;
 		 	img {display:none; }
 		}
@@ -298,20 +305,20 @@ header{
 }
 
 .copyright{
-	border-top:1px solid $red; 
+	border-top:1px solid $red;
 	padding-top:10px;
-	
+
 
 }
 .mesh{
 	float:right; margin-top:-38px;
- 
 
-		@include breakpoint(landscape) { 
+
+		@include breakpoint(landscape) {
      		margin-top:0px; float:left;
 	    }
 
-		@include breakpoint(portrait) { 
+		@include breakpoint(portrait) {
 		 	margin-top:0px; float:left;
 		}
 
@@ -321,18 +328,18 @@ header{
 ================================================== */
 
 
- 
+
 
 .leftcol{
- 
- 
+
+
 	@include breakpoint(smallscreen) {background-color: #ff0000;}
     @include breakpoint(landscape) {background-color: #1234ff;}
 	@include breakpoint(portrait) {background-color: #003366;}
- 
+
 }
 
- 
+
 
 
 
@@ -354,6 +361,3 @@ header{
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {}
-
-
- 

@@ -3,12 +3,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php wp_title( '|', true, 'right' );  ?>   <?php bloginfo('name'); ?></title>
-  
+
   <!-- Meta / og: tags
    ================================================== -->
   <?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
   <!-- the default values -->
- 
+
 
   <!-- if page is content page -->
   <?php if (is_single()) { ?>
@@ -25,13 +25,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="<?php bloginfo('template_url' );?>/assets/img/SA_logo.png" /> <?php } ?>
 
-  <!-- CSS 
+  <!-- CSS
   ================================================== -->
   <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/style.css" />
 
 
   <!-- Typekit
-  ================================================== 
+  ==================================================
   <script type="text/javascript" src="//use.typekit.net/byu7jsq.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
 
@@ -51,7 +51,7 @@
 <div id="header-bar"></div>
 <header>
   <div class="container">
-      
+
     <div class="six columns offset-by-three logo " >
       <a href="<?php bloginfo( 'url' );?>" title="<?php bloginfo( 'name' );?>"><img src="<?php bloginfo('template_url' );?>/assets/img/SA_logo.png" title="Smooth Ambler Spirits" alt="Smooth Ambler Spirits Logo"></a>
       <div class="tagline">HANDMADE AND HAND-PICKED IN GREENBRIER COUNTY, WEST VIRGINIA</div>
@@ -63,9 +63,9 @@
     </div>
 
     <br class="clear"/>
- 
-    <div id="mainNav" class="twelve columns">
-    
+
+    <div id="mainNav" class="twelve columns">    
+
         <?php if(has_nav_menu('main_nav')){
             $defaults = array(
             	'theme_location'  => 'main_nav',
@@ -88,10 +88,8 @@
           }else{
             echo "<p><em>main_nav</em> doesn't exist! Create it and it'll render here.</p>";
           } ?>
-      
+
     </div>
-    
+
   </div> <!-- End Container -->
 </header>
-
-

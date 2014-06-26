@@ -36,6 +36,18 @@
 	   'before_title'  => '<h2>',
 	   'after_title'   => '</h2>' ));
 
+  //shorten the excerpt
+  function custom_excerpt_length( $length ) {
+	return 25;
+  }
+  add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+  //read more link on the excerpt
+  function new_excerpt_more( $more ) {
+	return '<br/><a class="read_more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+  }
+  add_filter( 'excerpt_more', 'new_excerpt_more' );
+
   //editor style
   add_editor_style('assets/wp-admin/custom-editor-style.css');
 

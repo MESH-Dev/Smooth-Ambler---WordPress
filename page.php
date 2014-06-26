@@ -9,45 +9,44 @@
 
   <?php if( get_field('banner_image') ): ?>
     <div class="page-banner">
-        <?php 
+        <?php
           $imageArray = get_field('banner_image');
-          $imageAlt = $imageArray['alt']; 
-          $imageThumbURL = $imageArray['sizes']['page-banner'];  
+          $imageAlt = $imageArray['alt'];
+          $imageThumbURL = $imageArray['sizes']['page-banner'];
         ?>
-        <img src="<?php echo $imageThumbURL;?>" alt="<?php echo $imageAlt; ?>"> 
-        <div class=="banner-title"><h2><?php the_title(); ?></h2></div>
+        <img src="<?php echo $imageThumbURL;?>" alt="<?php echo $imageAlt; ?>">
     </div>
   <?php endif; ?>
 
 
-  <div class="container page-content"> 
-  
+  <div class="container page_content">
+
     <div class="two columns">
-        <?php 
+        <?php
               //get parent title
               global $post;
               if(is_page() && $post->post_parent) {
                 $pid = $post->post_parent;
                 $parent_link = get_permalink( $pid );
                 $parent_title = get_the_title($pid);
-              } 
-   
+              }
+
             //list parent child pages
             if($post->post_parent)
                 $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0&depth=1");
              else
                $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0&depth=1");
              if ($children) { ?>
-              
+
               <div class="side-nav">
                 <?php echo $parent_title; ?>
                 <ul>
                   <?php echo $children; ?>
-                </ul>  
-              </div>    
-                      
+                </ul>
+              </div>
+
         <?php } ?>
-    </div>  
+    </div>
 
     <?php if( get_field('second_column') ):  //TWO COLUMNS?>
       <div class="five columns content">
@@ -60,15 +59,23 @@
 
     <?php else: //ONE COLUMN ONLY?>
 
-      <div class="eight columns content">
+      <div class="six columns content">
         <?php the_content(); ?>
       </div>
 
-    <?php endif; ?> 
+      <div class="four columns">
+          <?php while(has_sub_field('sidebar_content_block')): ?>
+
+              <img src="<?php $image = get_sub_field('image'); echo $image['url']; ?>" />
+
+          <?php endwhile; ?>
+      </div>
+
+    <?php endif; ?>
 
   </div><!-- End of Container -->
 
-<?php endwhile; ?>  
+<?php endwhile; ?>
 
 
 <?php get_footer(); ?>

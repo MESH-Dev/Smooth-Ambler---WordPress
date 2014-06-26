@@ -20,34 +20,16 @@
   <?php endif; ?>
 
 
-  <div class="container page-content">
+  <div class="container page_content">
 
     <div class="three columns">
-        <?php
-              //get parent title
-              global $post;
-              if(is_page() && $post->post_parent) {
-                $pid = $post->post_parent;
-                $parent_link = get_permalink( $pid );
-                $parent_title = get_the_title($pid);
-              }
+        <ul>
+            <li><h4>Blog Menu</h4></li>
+            <li><h4>Archives</h4></li>
+            <li><h4>Search</h4></li>
 
-            //list parent child pages
-            if($post->post_parent)
-                $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0&depth=1");
-             else
-               $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0&depth=1");
-             if ($children) { ?>
-
-              <div class="side-nav">
-                <?php echo $parent_title; ?>
-                <ul>
-                  <?php echo $children; ?>
-                </ul>
-              </div>
-
-        <?php } ?>
-        <?php get_sidebar() ?>
+            <!-- Need to come bck and fix this -->
+        </ul>
     </div>
 
     <div class="three columns content">

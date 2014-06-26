@@ -20,7 +20,7 @@
   <?php endif; ?>
 
 
-  <div class="container page-content">
+  <div class="container page_content">
 
     <div class="eight columns">
         <?php the_content(); ?>
@@ -32,7 +32,7 @@
 
             <img src="<?php $image = get_sub_field('image'); echo $image['url']; ?>" />
 
-        <?php endwhile; ?>    
+        <?php endwhile; ?>
 
     </div>
 
