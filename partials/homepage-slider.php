@@ -29,18 +29,18 @@
 						</div>
 					</div>
 				</li>
- 
+
 				<?
 				}
 			}
-			else 
+			else
 			{ ?>
 				<li>
 						<?php if(get_field('top_image')){ ?>
-							<img src="<?php the_field('top_image'); ?>" alt="" title="">	
-						<?php } else { ?>				
+							<img src="<?php the_field('top_image'); ?>" alt="" title="">
+						<?php } else { ?>
 							<img src="<?php bloginfo('template_url'); ?>/images/int.jpg" alt="" title="">
-						<?php } ?>	
+						<?php } ?>
 
 					<div class="container">
 						<div class="page_title_container">
@@ -53,7 +53,7 @@
 
 			<? } */ ?>
 
-		
+
 
 	</ul>
 </div>

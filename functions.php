@@ -9,10 +9,13 @@
 
   //theme supports
   add_theme_support('post-thumbnails');
-  add_image_size('page-banner', 1800, 400, true);  
+  add_image_size('page-banner', 1800, 400, true);
 
-   
- 
+  add_image_size('homepage-row-1-image', 450, 253, true);
+
+  add_image_size('four-col-square', 290, 290, true);
+  add_image_size('three-col-square', 210, 210, true);
+
   add_theme_support('html5');
   add_theme_support('automatic-feed-links');
 
