@@ -12,17 +12,181 @@ header{
 	height: 260px;
 }
 
-#mainNav li{display: inline; float: left;}
-
- 
 .logo{
 	padding-top: 20px;
 	text-align: center;
+
+	.tagline{
+		font: 9px/16px "Oswald", sans-serif;
+		letter-spacing: 0.3em;
+		color: $cherry_black;
+		padding: 10px 0 20px 0;
+	}
+	& img:hover{
+		@include opacity(0.8);
+	}
  }
+
+ .header-btns{
+ 	margin-top: 30px;
+ }
+
+
+/* Navigation Styles
+================================================== */
+
+#mainNav{
+	border-bottom: 1px solid $cherry_black;
+	border-top: 1px solid $cherry_black;
+	float:left;
+ 
+   	position:relative;
+
+}
+#mainNav ul {
+	clear:left;
+   	float:right;
+   	list-style:none;
+   	margin:0;
+   	padding:0;
+   	position:relative;
+   	right:50%;
+   	text-align:center;
+	
+}
+
+#mainNav ul li {
+	display:block;
+   	float:left;
+   	list-style:none;
+   	margin:0;
+   	padding:0;
+   	position:relative;
+   	left:50%;
+ 
+}
+  
+#mainNav ul li a {
+	font: 11px/18px "Stint Ultra Expanded", cursive;
+	text-transform: uppercase;
+	padding: 5px 15px;  
+	letter-spacing: 0.08em;
+	color: $cherry_black;
+	text-decoration: none;
+	display: block;
+}
+
+#mainNav li:hover {
+	cursor: pointer;
+}
+
+/* Submenu items */
+#mainNav ul ul {
+	display:none; 
+	position:absolute;
+	top:2em;
+	left:0;
+	right:auto;
+	width:10em; 
+	z-index: 1000;
+}
+#mainNav ul ul li {
+	left:auto;
+	background: rgba(227, 217, 191, 0.99);
+	margin:0; 
+	clear:left;
+	width:100%;
+	padding:0px 20px 0px 0px ;
+ 
+}
+
+#mainNav ul ul li a,
+#mainNav ul li:hover ul li a{ 
+	padding:4px 0px 5px 10px ; 
+	font-size:11px;
+	text-align:left; 
+	line-height:30px;  
+	//border-bottom:2px  $cherry_black dashed; 
+	&:after{
+		content:"";
+		 
+	    position: absolute;
+	    border-bottom:2px  $cherry_black dashed;
+	    left: 10px;
+	    bottom: 0;
+	    width: 50%;
+	}
+}
+
+ 
+
+
+#mainNav ul ul li a:hover,
+#mainNav ul li:hover ul li a:hover{ 
+	color:$dark_red;
+}
+
+#mainNav ul ul.last {
+	left:auto;  
+	right:0;  
+}
+
+#mainNav ul li:hover ul { 
+	display:block;  
+}
+
 
  
 /* Hompage Styles
 ================================================== */
+
+/* Responsive Slides */
+.rslides {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+}
+
+.rslides li {
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.rslides li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.rslides img {
+	display: block;
+	height: auto;
+	float: left;
+	width: 100%;
+	border: 0;
+}
+
+.home-title{
+ 	position: relative;
+	z-index: 2;
+	top:-200px;
+	text-align: center;
+
+
+	h2 {color: $cream;}
+	 
+}
+
+
   
 
  

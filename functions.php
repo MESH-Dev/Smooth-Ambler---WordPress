@@ -1,10 +1,11 @@
 <?php
   //enqueue scripts and styles *use production assets. Dev assets are located in assets/css and assets/js
-  function WPS_scripts() {
+  function SmoothAmbler_scripts() {
   	wp_enqueue_script( 'script-name', get_template_directory_uri().'/assets/prod/WPStarter.js', array('jquery'), '1.0.0', true );
     wp_enqueue_style('font-awesome',get_template_directory_uri().'/assets/libs/font-awesome-4.1.0/css/font-awesome.min.css');
+     wp_register_script('slider', get_template_directory_uri() . '/assets/js/responsiveslides.min.js');   //concat this with WPStarter...
   }
-  add_action( 'wp_enqueue_scripts', 'WPS_scripts' );
+  add_action( 'wp_enqueue_scripts', 'SmoothAmbler_scripts' );
 
   //theme supports
   add_theme_support('post-thumbnails');
