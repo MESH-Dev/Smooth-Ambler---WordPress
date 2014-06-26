@@ -1,9 +1,7 @@
 <?php
   //enqueue scripts and styles *use production assets. Dev assets are located in assets/css and assets/js
   function WPS_scripts() {
-  	wp_enqueue_style( 'WPS-script', get_template_directory_uri().'/assets/prod/production.min.css' );
   	wp_enqueue_script( 'script-name', get_template_directory_uri().'/assets/prod/WPStarter.js', array('jquery'), '1.0.0', true );
-
     wp_enqueue_style('font-awesome',get_template_directory_uri().'/assets/libs/font-awesome-4.1.0/css/font-awesome.min.css');
   }
   add_action( 'wp_enqueue_scripts', 'WPS_scripts' );
@@ -12,16 +10,8 @@
   add_theme_support('post-thumbnails');
   add_image_size('page-banner', 1800, 400, true);  
 
-  $defaults = array(
-    'flex-height'   => true,
-    'flex-width'    => true,
-    'height'        => 100,
-    'width'         => 200,
-    'default-image' => get_template_directory_uri() . '/assets/img/logo.gif',
-    'header-text'   => false
-  );
-  add_theme_support('custom-header', $defaults);
-  add_theme_support('custom-background');
+   
+ 
   add_theme_support('html5');
   add_theme_support('automatic-feed-links');
 
@@ -33,8 +23,8 @@
 
   //widgets
   register_sidebar(array(
-	   'name'          => __( 'Footer - Left' ),
-	   'id'            => 'footer-left',
+	   'name'          => __( 'blog-sidebar' ),
+	   'id'            => 'blog-sidebar',
 	   'description'   => '',
      'class'         => '',
 	   'before_widget' => '',
@@ -52,7 +42,7 @@
 
   //footer attribution
   function WPS_footer_admin () {
-	   echo 'Theme developed by <a href="http://pateason.com">Pat Eason</a>.';
+	   echo 'Theme developed by <a href="http://meshfresh.com.com">MESH</a>.';
   } add_filter('admin_footer_text', 'WPS_footer_admin');
 
   //disable code editors
