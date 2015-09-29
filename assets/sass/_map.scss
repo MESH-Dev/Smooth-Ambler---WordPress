@@ -1,0 +1,183 @@
+
+#gmaps-locator-container{
+	width: 920px; height:470px;
+	background: $grey;
+	border: 1px solid #472A2B;
+	outline: 1px solid #472A2B;
+	outline-offset: -4px;
+	padding: 4px;
+	margin-top:40px;
+
+	@include breakpoint(smallscreen) {
+		width: 780px; height: 398px;
+	}
+	@include breakpoint(landscape) {
+		width: 410px; height: 209px;
+	}
+	@include breakpoint(portrait) {
+		width: 290px; height: 148px;
+	}
+
+}
+#gmaps-locator{
+	width:900px !important;
+	height:450px !important;
+	padding:10px;
+
+	@include breakpoint(smallscreen) {
+		width: 760px !important;
+		height: 378px !important;
+	}
+	@include breakpoint(landscape) {
+		width: 390px !important;
+		height: 189px !important;
+	}
+	@include breakpoint(portrait) {
+		width: 270px !important;
+		height: 128px !important;
+	}
+}
+
+
+#gmaps-locator-radius{padding:0px !important; margin-top: 20px; margin-bottom:40px;}
+#gmaps-locator-radius h2{margin-bottom: 20px; margin-top: 20px;}
+
+.table-border{height: 2px; border-top: 2px dashed #472A2B;}
+.table-header{
+	padding-bottom: 15px;
+	@include breakpoint(landscape) {
+		display: none !important;
+	}
+	@include breakpoint(portrait) {
+		display: none !important;
+	}
+}
+.table-row{
+	padding: 2px 0px 0px 0px;
+	i {color:$red; font-size: 18px;}
+	img{margin-top:0px;}
+	a{color: $cherry_black;}
+	a:hover{color: $dark_red;}
+	@include breakpoint(landscape) {
+		padding: 0;
+		margin-bottom: 0px !important;
+	}
+	@include breakpoint(portrait) {
+		padding: 0;
+		margin-bottom: 0px !important;
+	}
+}
+
+span#gmaps-locator-radius-count{color: $red;}
+
+#online-btn{margin-top:20px; margin-bottom:20px;}
+
+#online-wrap .fa{font-size: 22px; padding: 2px 0px 6px 0px;}
+
+
+#gmaps-locator-container img {
+    max-width: none !important;
+}
+
+.gm-style, #gmaps-locator{overflow: visible !important; }
+
+input#pac-input{
+	background:  #fff;
+	border: 1px solid $cherry_black;
+	outline: 1px solid $cherry_black;
+	outline-offset: -4px;
+	font-family: "Oswald", sans-serif;
+	color:$cherry_black !important;
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	position: relative !important;
+	z-index:10 !important;
+	top: -55px !important;
+	left: -4px !important;
+	padding: 8px 20px 8px 40px;
+
+	width: 700px;
+
+	@include breakpoint(smallscreen) {
+		width: 562px;
+		font-size: 14px;
+	}
+	@include breakpoint(landscape) {
+		width: 357px;
+		font-size: 14px;
+	}
+	@include breakpoint(portrait) {
+		width: 237px;
+		font-size: 10px;
+	}
+
+}
+
+button#searchit {
+	position: relative !important;
+	z-index: 10 !important;
+	top: 44px !important;
+	left: 743px !important;
+	padding: 10px 60px 10px 60px;
+	@include breakpoint(smallscreen) {
+		left: 608px !important;
+	}
+	@include breakpoint(landscape) {
+		display: none;
+	}
+	@include breakpoint(portrait) {
+		display: none !important;
+	}
+}
+
+.fa-search{
+	position:relative;
+	z-index: 12;
+	color:$cherry_black;
+	font-size: 20px;
+	top: 44px;
+	left: 10px;
+
+	@include breakpoint(landscape) {
+		top: 24px;
+	}
+	@include breakpoint(portrait) {
+		top: 24px;
+	}
+}
+
+
+
+
+
+#GMAP_LOCATOR_content{
+	width: 500px !important;
+	overflow: hidden !important;
+}
+
+#GMAPS_LOCATOR_body{
+	line-height:18px;
+
+}
+
+.gm-style-iw{overflow: hidden !important;}
+
+
+
+::-webkit-input-placeholder { color: $cream ;}
+:-moz-placeholder {color: $cream ; }
+::-moz-placeholder { color: $cream ; }
+:-ms-input-placeholder { color: $cream ; }
+
+.loc-separator {
+	margin: 0px 0px;
+
+	@include breakpoint(landscape) {
+		margin: 15px 0px;
+	}
+	@include breakpoint(portrait) {
+		margin: 15px 0px;
+	}
+}

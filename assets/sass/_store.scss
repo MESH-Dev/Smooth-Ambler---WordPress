@@ -1,0 +1,37 @@
+
+/* Table of Content
+==================================================
+
+
+/* Header Styles
+================================================== */
+
+
+.product {
+    line-height: 55px;
+}
+
+.price {
+    text-align: right;
+    @include breakpoint(landscape) {
+        text-align: left;
+    }
+    @include breakpoint(portrait) {
+        text-align: left;
+    }
+}
+
+.remove {
+    text-align: center;
+    @include breakpoint(landscape) {
+        text-align: left;
+    }
+    @include breakpoint(portrait) {
+        text-align: left;
+    }
+}
+
+.quantity input {
+    line-height: 10px;
+    margin-top: 10px;
+}

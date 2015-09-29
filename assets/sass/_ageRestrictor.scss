@@ -1,0 +1,40 @@
+.ar-callout{
+
+	background: $grey;
+	border: 1px solid $cherry_black;
+	outline: 1px solid $cherry_black;
+	outline-offset: -4px;
+	margin-left: 240px !important;
+	padding: 20px 20px;
+	color: $cherry_black;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 300;
+	text-decoration: none;
+	line-height: 21px;
+	font-family: "Oswald", sans-serif;
+	letter-spacing: 0.05em;
+	  height:500px;
+	margin-top: 10px;
+
+	  text-align: center;
+	//margin: auto;
+    position: absolute;
+    top: 60px;
+
+	@include breakpoint(landscape) {width: 260px !important; margin: 0 auto !important;}
+	@include breakpoint(portrait) {width: 260px !important; margin: 0 auto !important;}
+
+    img{
+    	margin-bottom: 40px;
+    }
+
+}
+
+.age-btns{
+	margin-left: 0px !important;
+
+	@include breakpoint(smallscreen) {margin-top:30px;}
+	@include breakpoint(landscape) {width: 260px !important; margin-top:30px !important;}
+	@include breakpoint(portrait) {width: 260px !important; margin-top:30px !important;}
+}
